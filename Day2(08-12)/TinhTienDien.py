@@ -18,3 +18,4 @@ def electric_calculator():
     print(f"Tien dien la: {tien_dien}")
 
 electric_calculator()
+# Tính giống với trang trên evn
