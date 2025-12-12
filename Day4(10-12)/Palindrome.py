@@ -9,3 +9,4 @@ class Solution:
 
 solution = Solution()
 print(solution.isPalindrome("A man, a plan, a canal: Panama"))
+print(solution.isPalindrome("abca"))
