@@ -8,6 +8,9 @@ class Solution:
             s += i
             sum_list.append(s)
         return sum_list
+        # s = 0
+        # sum_list = [sum(nums[:i + 1]) for i in range(len(nums))]
+        # return sum_list
 
 solution = Solution()
 print(solution.runningSum([1, 2, 3, 4]))

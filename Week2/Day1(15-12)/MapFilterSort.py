@@ -19,7 +19,7 @@ print(passing_grades)
 # List
 car = ["McLaren", "Ferrari", "Williams", "Aston Martin", "Mercedes"]
 
-car.sort()
+car.sort(reverse=True)
 
 print(car)
 
