@@ -8,3 +8,4 @@ def checkPalindrome(s: str) -> bool:
     return forward_list == backward_list
 
 print(checkPalindrome("racecar"))
+print(checkPalindrome("Nghia"))

@@ -34,7 +34,7 @@ class StudentManager:
         
         print("Student Ranking (by GPA):")
         for i, student in enumerate(self.students, start=1):
-            print(f"  {i}. {student}")
+            print(f"{i}. {student}")
         
         return self.students
 
