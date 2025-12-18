@@ -12,7 +12,7 @@ Sử dụng 2 kỹ thuật kiểm thử:
 """
 
 import unittest
-from Student import Student, StudentManager
+from . import Student
 
 
 class TestAddStudent(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestAddStudent(unittest.TestCase):
     
     def setUp(self):
         """Khởi tạo StudentManager mới cho mỗi test."""
-        self.manager = StudentManager()
+        self.manager = Student.StudentManager()
     
     # Test Case 1: EP - Valid student với dữ liệu chuẩn
     def test_add_valid_student_normal_data(self):
@@ -40,7 +40,7 @@ class TestAddStudent(unittest.TestCase):
         [EP] Thêm sinh viên với dữ liệu hợp lệ tiêu chuẩn.
         Expected: Danh sách có 1 sinh viên.
         """
-        student = Student("SV001", "Nguyen Van A", 20, 3.5)
+        student = Student.Student("SV001", "Nguyen Van A", 20, 3.5)
         self.manager.add_student(student)
         
         self.assertEqual(len(self.manager.students), 1)
@@ -93,7 +93,7 @@ class TestAddStudent(unittest.TestCase):
         [BVA] Thêm sinh viên với age = 18 (tuổi biên dưới hợp lệ).
         Expected: Sinh viên được thêm thành công với age = 18
         """
-        student = Student("SV004", "Pham Van D", 18, 3.2)
+        student = Student.Student("SV004", "Pham Van D", 18, 3.2)
         self.manager.add_student(student)
         
         self.assertEqual(len(self.manager.students), 1)
