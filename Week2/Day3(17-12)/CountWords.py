@@ -6,10 +6,7 @@ def count_words(text: str) -> dict:
     
     word_count = {}
     for word in this_list:
-        if word in word_count:
-            word_count[word] += 1
-        else:
-            word_count[word] = 1
+        word_count[word] = word_count.get(word, 0) + 1
     
     return word_count
 
