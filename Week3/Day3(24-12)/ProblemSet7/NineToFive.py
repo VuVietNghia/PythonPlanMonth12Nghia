@@ -1,5 +1,4 @@
 import re
-import sys
 
 
 def main():
@@ -9,13 +8,13 @@ def main():
 def convert(s):
     matches = re.search(r"^(\d{1,2})(?::(\d{2}))? (AM|PM) to (\d{1,2})(?::(\d{2}))? (AM|PM)$", s.strip())
     if matches:
-        pieces = isCorrectFormat(matches)
+        pieces = correct_format(matches)
         if pieces:
             return pieces
     raise ValueError
     
 
-def isCorrectFormat(matches):
+def correct_format(matches):
     start_hour = int(matches.group(1))
     start_minute = matches.group(2)
     start_period = matches.group(3)
