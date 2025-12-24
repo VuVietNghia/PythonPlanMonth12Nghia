@@ -1,5 +1,5 @@
 import unittest
-from .DeepThought import check_answer  # Relative import for PyCharm compatibility
+from .DeepThought import check_answer
 
 class TestDeepThought(unittest.TestCase):
     
