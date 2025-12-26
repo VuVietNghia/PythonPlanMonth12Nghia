@@ -107,7 +107,7 @@ if __name__ == "__main__":
             car_manager.show_all_cars()
         elif choice == "6":
             if car_manager.export_to_csv():
-                print("✅ Cars exported to CSV successfully!")
+                print("Cars exported to CSV successfully!")
         elif choice == "7":
             print("Exit")
             break
