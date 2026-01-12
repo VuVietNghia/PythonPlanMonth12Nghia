@@ -1,18 +1,22 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
-        forward_list = list(s)
-        backward_list = list(s)
-        backward_list.reverse()
+        left = 0
+        right = len(s) - 1
 
-        for i in forward_list:
-            for j in backward_list:
-                if forward_list != backward_list:
-                    forward_list.remove(i)
-                    backward_list.remove(j)
-                    return True
-                else:
-                    return False
-            return True
+        while left < right:
+            if s[left] != s[right]:
+                return self.isPalindrome(s, left + 1, right) or self.isPalindrome(s, left, right - 1)
+            left += 1
+            right -= 1
+        return True
+
+    def isPalindrome(self, s: str, i: int, j: int) -> bool:
+        while i < j:
+            if s[i] != s[j]:
+                return False
+            i += 1
+            j -= 1
+        return True
 
 solution = Solution()
 print(solution.validPalindrome("aba"))

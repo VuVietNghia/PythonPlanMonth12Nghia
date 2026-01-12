@@ -9,6 +9,12 @@ class Solution:
                 left += 1
         return left
 
+        # this_list = []
+        # for i in nums:
+        #     if i != val:
+        #         this_list.append(i)
+        # return len(this_list)
+
 solution = Solution()
 print(solution.removeElement([3, 2, 2, 3], 3))
 print(solution.removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2))

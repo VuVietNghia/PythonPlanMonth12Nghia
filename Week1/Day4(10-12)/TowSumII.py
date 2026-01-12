@@ -7,10 +7,10 @@ class Solution:
         while left < right:
             if numbers[left] + numbers[right] == target:
                 return [left + 1, right + 1]
-            elif numbers[left] + numbers[right] > target:
-                right -= 1
-            else:
+            elif numbers[left] + numbers[right] < target:
                 left += 1
+            else:
+                right -= 1
         return []
 
 solution = Solution()
