@@ -1,0 +1,6 @@
+Nhap/
+Nhap.py
+*.py.bak
+__pycache__/
+.idea/
+.env
